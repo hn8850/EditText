@@ -64,6 +64,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:hint = "Sum?"
+                    android:maxLength="3"
                     android:layout_weight="15"
                     android:ems="10"
                     android:gravity="center"
@@ -140,7 +141,8 @@
                     android:ems="10"
                     android:gravity="center"
                     android:hint="Sum?"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:maxLength="3" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -212,7 +214,8 @@
                     android:ems="10"
                     android:gravity="center"
                     android:hint="Sum?"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:maxLength="3" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -276,7 +279,7 @@
 
             <Space
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="20" />
 
         </LinearLayout>

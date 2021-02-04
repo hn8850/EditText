@@ -55,14 +55,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String Answer1 = A3.getText().toString();
                 int AnswerNum1 = Integer.parseInt(Answer1);
-                if (num1+num2==AnswerNum1){
+                if (num1 + num2 == AnswerNum1) {
                     A4.setImageResource(R.drawable.ve);
-                    toast=+1;
+                    toast++;
+                } else {
+                    A4.setImageResource(R.drawable.bad);
                 }
-                else{
-                    A4.setImageResource(R.drawable.ve);
-                }
-                num1 = num1+num2;
+                num1 = num1 + num2;
                 B1.setText("" + num1);
                 num2 = rand.nextInt(90) + 10;
                 B2.setText("" + num2);
@@ -77,14 +76,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String Answer2 = B3.getText().toString();
                 int AnswerNum2 = Integer.parseInt(Answer2);
-                if (num1+num2==AnswerNum2){
+                if (num1 + num2 == AnswerNum2) {
                     B4.setImageResource(R.drawable.ve);
-                    toast=+1;
-                }
-                else{
+                    toast++;
+                } else {
                     B4.setImageResource(R.drawable.bad);
                 }
-                num1 = num1+num2;
+                num1 = num1 + num2;
                 C1.setText("" + num1);
                 num2 = rand.nextInt(90) + 10;
                 C2.setText("" + num2);
@@ -99,14 +97,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String Answer3 = C3.getText().toString();
                 int AnswerNum3 = Integer.parseInt(Answer3);
-                if (num1+num2==AnswerNum3){
+                if (num1 + num2 == AnswerNum3) {
                     C4.setImageResource(R.drawable.ve);
-                    toast=+1;
-                }
-                else{
+                    toast ++;
+                } else {
                     C4.setImageResource(R.drawable.bad);
                 }
-                Toast.makeText(getApplicationContext(), "GG! You got" + toast + "/3 right!" , Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "You answered "+toast+"/3 correct", Toast.LENGTH_LONG).show();
                 C5.setEnabled(false);
                 C3.setEnabled(false);
             }
@@ -133,11 +130,9 @@ public class MainActivity extends AppCompatActivity {
                 C3.setText(null);
 
 
-
-
             }
         });
-        }
+    }
 
 
 }
